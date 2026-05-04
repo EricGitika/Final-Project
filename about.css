@@ -111,7 +111,7 @@ body {
 
 /* ── PHILOSOPHY ── */
 .philosophy {
-    /* background:gray; */
+    background: rgb(192, 157, 93);
     padding: 100px 64px;
     margin-top: 60px;
 }
@@ -125,7 +125,7 @@ body {
     font-size: 11px;
     letter-spacing: 0.32em;
     text-transform: uppercase;
-    color: #c4a878;
+    color: white;
     margin-bottom: 28px;
     display: block;
 }
@@ -144,7 +144,7 @@ blockquote {
 
 .philosophy-body {
     font-size: 15px;
-    color: rgb(222, 189, 127);
+    color: whitesmoke;
     line-height: 1.85;
     margin-bottom: 18px;
     
@@ -385,7 +385,8 @@ blockquote {
     padding: 36px 64px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    text-align: center;
 }
 
 .footer-logo {
@@ -394,6 +395,8 @@ blockquote {
     letter-spacing: 0.25em;
     text-transform: uppercase;
     color: #ede5d5;
+    left: 20px;
+    position: absolute;
 }
 
 .footer p {
@@ -402,7 +405,10 @@ blockquote {
     letter-spacing: 0.06em;
 }
 
-.footer
+.footer-wrd{
+    text-align: center;
+    justify-content: center;
+}
 
 /* ── RESPONSIVE ── */
 @media (max-width: 1024px) {
