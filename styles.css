@@ -298,3 +298,19 @@ h1 em { font-style: italic; color: #c4a878; }
         columns: 1;
     }
 }
+
+/* ── SERVICES SECTION ── */
+.services-section {
+    padding: 100px 64px;
+    background: #faf9f7;
+}
+
+.services-section .section-header h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 48px;
+    font-weight: 300;
+    color: #1a1a18;
+    margin-bottom: 48px;
+}
+
+
