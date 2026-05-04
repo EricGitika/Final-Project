@@ -298,32 +298,28 @@ h1 em { font-style: italic; color: #c4a878; }
         columns: 1;
     }
 }
-
-/* ── SERVICES SECTION ── */
 .services-section {
-    padding: 100px 64px;
-    background: #faf9f7;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: start;
-    gap: 40px;
+  padding: 100px 64px;
+  background: #faf9f7;
 }
 
-.services-section .section-header h2 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 48px;
-    font-weight: 300;
-    color: #1a1a18;
-    margin-bottom: 48px;
-}
-.service-img{
-  position: relative;
-
-}
-.service-img img{
-      width: 100%;
-    max-width: 400px;
-    height: auto;
+/* two-column layout lives here */
+.services-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 64px;
 }
 
+.services-grid {
+  display: flex;
+  flex-direction: column;
+}
 
+.service-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 2px;
+}
