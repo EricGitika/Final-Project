@@ -303,6 +303,10 @@ h1 em { font-style: italic; color: #c4a878; }
 .services-section {
     padding: 100px 64px;
     background: #faf9f7;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    gap: 40px;
 }
 
 .services-section .section-header h2 {
@@ -311,6 +315,15 @@ h1 em { font-style: italic; color: #c4a878; }
     font-weight: 300;
     color: #1a1a18;
     margin-bottom: 48px;
+}
+.service-img{
+  position: relative;
+
+}
+.service-img img{
+      width: 100%;
+    max-width: 400px;
+    height: auto;
 }
 
 
