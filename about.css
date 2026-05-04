@@ -402,23 +402,7 @@ blockquote {
     letter-spacing: 0.06em;
 }
 
-.footer-links {
-    display: flex;
-    gap: 28px;
-}
-
-.footer-links a {
-    font-size: 11px;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: rgba(237,229,213,0.35);
-    text-decoration: none;
-    transition: color 0.2s;
-}
-
-.footer-links a:hover {
-    color: #c4a878;
-}
+.footer
 
 /* ── RESPONSIVE ── */
 @media (max-width: 1024px) {
