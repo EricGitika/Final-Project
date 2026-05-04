@@ -323,3 +323,32 @@ h1 em { font-style: italic; color: #c4a878; }
   display: block;
   border-radius: 2px;
 }
+footer {
+    background: #0f0e0c;
+    padding: 36px 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.footer-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 16px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: #ede5d5;
+    left: 20px;
+    position: absolute;
+}
+
+.footer p {
+    font-size: 12px;
+    color: rgba(237,229,213,0.3);
+    letter-spacing: 0.06em;
+}
+
+.footer-wrd{
+    text-align: center;
+    justify-content: center;
+}
