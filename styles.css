@@ -289,9 +289,14 @@ h1 em { font-style: italic; color: #c4a878; }
         columns: 1;
     }
 }
+.service{
+  color: white;
+}
+
+
 .services-section {
   padding: 100px 64px;
-  background: #faf9f7;
+  background: rgb(192, 157, 93);
 }
 
 /* two-column layout lives here */
@@ -306,6 +311,14 @@ h1 em { font-style: italic; color: #c4a878; }
   display: flex;
   flex-direction: column;
 }
+
+.service-card {
+  padding: 24px 0;
+  border-top: 0.5px solid #d4cfc7;  /* ← this adds the line above each card */
+  display: grid;
+  gap: 0 20px;
+}
+
 
 .service-img img {
   width: 100%;
