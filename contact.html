@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Habitat Studio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="contact.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ── NAVIGATION ── -->
+  <nav class="nav nav-light">
+    <div class="logo"><a href="index.html">Habitat Studio</a></div>
+    <ul class="nav-links">
+      <li><a href="./index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="./contact.html" class="active">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ── CONTACT HERO ── -->
+  <section class="contact-hero">
+    <p class="eyebrow-dark">Get In Touch</p>
+    <h1>Let's build something<br><em>together</em></h1>
+    <p class="contact-hero-sub">Whether you have a project in mind or just want to explore what's possible — we'd love to hear from you.</p>
+  </section>
+
+  <!-- ── CONTACT BODY ── -->
+  <section class="contact-body">
+
+    <!-- LEFT: Form -->
+    <div class="contact-form-wrap">
+      <p class="contact-section-label">Send a Message</p>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" placeholder="Jane Mwangi" />
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" placeholder="jane@example.com" />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="service">Service You're Interested In</label>
+        <select id="service">
+          <option value="" disabled selected>Select a service</option>
+          <option>Interior Design</option>
+          <option>Space Planning</option>
+          <option>Renovation Consulting</option>
+          <option>Furniture Sourcing</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Tell Us About Your Project</label>
+        <textarea id="message" rows="5" placeholder="Describe your space, timeline, and what you're hoping to achieve..."></textarea>
+      </div>
+
+      <button class="contact-btn">Send Message</button>
+    </div>
+
+    <!-- RIGHT: Info -->
+    <div class="contact-info">
+
+      <div class="info-block">
+        <p class="info-label">Studio Location</p>
+        <p class="info-value">Habitat Studio<br>Karen, Nairobi<br>Kenya</p>
+      </div>
+
+      <div class="info-block">
+        <p class="info-label">Email Us</p>
+        <a href="mailto:hello@habitatstudio.co.ke" class="info-link">hello@habitatstudio.co.ke</a>
+      </div>
+
+      <div class="info-block">
+        <p class="info-label">Call Us</p>
+        <a href="tel:+254700000000" class="info-link">+254 700 000 000</a>
+      </div>
+
+      <div class="info-block">
+        <p class="info-label">Studio Hours</p>
+        <p class="info-value">Monday – Friday<br>8:00 am – 5:00 pm EAT</p>
+      </div>
+
+      <div class="info-divider"></div>
+
+      <div class="info-block">
+        <p class="info-label">Follow Our Work</p>
+        <div class="social-links">
+          <a href="#" class="social-link">Instagram</a>
+          <a href="#" class="social-link">Pinterest</a>
+          <a href="#" class="social-link">Houzz</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer">
+    <div class="footer-logo">Habitat Studio</div>
+    <p class="footer-wrd">© 2026 Habitat Studio. Nairobi, Kenya.</p>
+  </footer>
+
+</body>
+</html>

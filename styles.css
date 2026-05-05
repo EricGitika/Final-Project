@@ -7,13 +7,13 @@ body{
 .hero {
   position: relative;
   height: 100vh;
-  background: #1a1a18;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: center;
   font-family: 'Jost', sans-serif;
   background: url(./house.jpg) center / cover no-repeat;
+  ba
 }
 
 
