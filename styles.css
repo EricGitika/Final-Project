@@ -314,7 +314,7 @@ h1 em { font-style: italic; color: #c4a878; }
 
 .service-card {
   padding: 24px 0;
-  border-top: 0.5px solid #d4cfc7;  /* ← this adds the line above each card */
+  border-top: 0.5px solid #d4cfc7;  
   display: grid;
   gap: 0 20px;
 }
