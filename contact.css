@@ -57,6 +57,8 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   position: relative;
+  gap: 30px;
+  padding: 60px 60px 120px;
 }
 .contact-hero h1 {
   font-family: 'Cormorant Garamond', serif;
@@ -83,5 +85,163 @@ body {
   margin: 0;
 }
 
+.contact-section-label {
+  font-family:'Times New Roman', Times, serif;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: black;
+  margin: 0 0 32px;
+  font-size: 20px;
 
+}
 
+.contact-description{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 35px;
+  font-style: italic;
+  padding-left: 35px;
+
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-group{
+  display: flex;
+  flex-direction: column;
+  margin: 24px;
+}
+
+.form-group label {
+  font-family: 'Jost', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #9c8a6e;
+  margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  font-family: 'Jost', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  color: #1c1a16;
+  background: transparent;
+  border: none;
+  border-bottom: 0.5px solid #d4cfc7;
+  padding: 10px 0;
+  outline: none;
+  transition: border-color 0.2s;
+  appearance: none;
+  border-radius: 0;
+}
+.form-group select {
+  cursor: pointer;
+  color: #9c8a6e;
+}
+.contact-btn {
+  font-family: 'Jost', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #faf9f6;
+  background:  #9c8a6e;
+  border: none;
+  padding: 16px 40px;
+  border-radius: 1px;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: background 0.2s;
+}
+
+.contact-btn:hover {
+  background: #3a3528;
+}
+
+.contact-btn:active{
+  background-color: #1c1a16;
+
+}
+
+/* ── INFO PANEL ── */
+.contact-info {
+  padding-left: 64px;
+  border-left: 0.5px solid #d4cfc7;
+  margin-top: 5%;
+  margin-bottom: 0%;
+}
+
+.info-block {
+  margin-top: 7px;
+}
+.info-label {
+  font-family: 'Jost', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #9c8a6e;
+  margin: 0 0 8px;
+}
+.info-value {
+  font-family: 'Jost', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  color: #1c1a16;
+  line-height: 1.75;
+  margin: 0;
+}
+.info-link {
+  font-family: 'Jost', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  color: #1c1a16;
+  text-decoration: none;
+  border-bottom: 0.5px solid #d4cfc7;
+  padding-bottom: 1px;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.info-link:hover {
+  color: #8b7355;
+  border-bottom-color: #8b7355;
+}
+
+.info-divider {
+  width: 40px;
+  height: 0.5px;
+  background: #d4cfc7;
+  margin: 8px 0 36px;
+}
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.social-link {
+  font-family: 'Jost', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  color: #1c1a16;
+  text-decoration: none;
+  border-bottom: 0.5px solid #d4cfc7;
+  padding-bottom: 1px;
+  width: fit-content;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.social-link:hover {
+  color: #8b7355;
+  border-bottom-color: #8b7355;
+}
