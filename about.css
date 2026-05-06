@@ -186,7 +186,7 @@ blockquote {
 
 .team-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 40px;
 }
 
@@ -204,6 +204,7 @@ blockquote {
     border-radius: 3px;
     background: #d0cdc8;
     transition: transform 0.4s ease;
+    cursor: pointer;
 }
 
 .team-photo {
