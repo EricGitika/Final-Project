@@ -176,7 +176,7 @@ h1 em { font-style: italic; color: #c4a878; }
   margin-top: 4px;
 }
 
-/* Responsive */
+
 @media (max-width: 768px) {
   .nav, .hero-body, .hero-footer { padding-left: 28px; padding-right: 28px; }
   .nav-links { gap: 20px; }
@@ -205,7 +205,6 @@ h1 em { font-style: italic; color: #c4a878; }
     background: #faf9f7;
 }
 
-/* Pinterest masonry using CSS columns */
 .work-grid {
     columns: 3;
     column-gap: 16px;
@@ -370,6 +369,6 @@ footer {
     text-align: center;
     justify-content: center;
 }
-html {
+.html {
   scroll-behavior: smooth;
 }

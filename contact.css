@@ -252,13 +252,12 @@ body {
   font-size: 0.8rem;
   display: block;
   margin-top: 5px;
+  font-style: italic;
 }
 
 
-/* ==========================
-   SAVED PROJECTS
-========================== */
 
+   /* SAVED PROJECTS */
 .saved-projects {
   padding: 80px 10%;
 }

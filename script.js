@@ -44,7 +44,7 @@ form.addEventListener("submit", function (e) {
   }
 
   if (service === "") {
-    showError(serviceInput, "Select a service");
+    showError(serviceInput, "Please Select a service");
     isValid = false;
   }
 
