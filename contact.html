@@ -30,42 +30,63 @@
   </section>
 
   <!-- ── CONTACT BODY ── -->
-  <section class="contact-body">
+<section class="contact-body">
 
-    <!-- LEFT: Form -->
-    <div class="contact-form-wrap">
-      <h1 class="contact-section-label">(Contact Us)</h1>
-      <p class="contact-description">…every great architecture begins with a conversation.</p>
+  <!-- LEFT: Form -->
+  <form class="contact-form-wrap" id="contact-form">
 
-      <div class="form-row">
-        <div class="form-group">
-          <label for="name">Full Name</label>
-          <input type="text" id="name" placeholder="Enter Your Name" />
-        </div>
-        <div class="form-group">
-          <label for="email">Email Address</label>
-          <input type="email" id="email" placeholder="Enter Your Email Address " />
-        </div>
+    <h1 class="contact-section-label">(Contact Us)</h1>
+    <p class="contact-description">
+      …every great architecture begins with a conversation.
+    </p>
+
+    <div class="form-row">
+
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" placeholder="Enter Your Name" />
+        <small class="error"></small>
       </div>
 
       <div class="form-group">
-        <label for="service">Service You're Interested In</label>
-        <select id="service">
-          <option value="" disabled selected>Select a service</option>
-          <option>Interior Design</option>
-          <option>Space Planning</option>
-          <option>Renovation Consulting</option>
-          <option>Construction Documents(CDs)</option>
-        </select>
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="Enter Your Email Address" />
+        <small class="error"></small>
       </div>
 
-      <div class="form-group">
-        <label for="message">Tell Us About Your Project</label>
-        <textarea id="message" rows="5" placeholder="Describe your space, timeline, and what you're hoping to achieve..."></textarea>
-      </div>
-
-      <button class="contact-btn">Send Message</button>
     </div>
+
+    <div class="form-group">
+      <label for="service">Service You're Interested In</label>
+
+      <select id="service">
+        <option value="">Select a service</option>
+        <option>Interior Design</option>
+        <option>Space Planning</option>
+        <option>Renovation Consulting</option>
+        <option>Construction Documents(CDs)</option>
+      </select>
+
+      <small class="error"></small>
+    </div>
+
+    <div class="form-group">
+      <label for="message">Tell Us About Your Project</label>
+
+      <textarea
+        id="message"
+        rows="5"
+        placeholder="Describe your space, timeline, and goals..."
+      ></textarea>
+
+      <small class="error"></small>
+    </div>
+
+    <button type="submit" class="contact-btn">
+      Send Message
+    </button>
+
+  </form>
 
     <!-- RIGHT: Info -->
     <div class="contact-info">
@@ -102,6 +123,15 @@
 
     </div>
   </section>
+  
+  <!-- SAVED PROJECTS -->
+<section class="saved-projects">
+
+  <h2>Submitted Projects</h2>
+
+  <div id="data-container"></div>
+
+</section>
 
   <!-- ── FOOTER ── -->
   <footer class="footer">
