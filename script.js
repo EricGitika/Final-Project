@@ -1,25 +1,16 @@
-// ==========================
-// SELECT ELEMENTS
-// ==========================
-
 const form = document.getElementById("contact-form");
-
 const nameInput = document.getElementById("name");
 const emailInput = document.getElementById("email");
 const serviceInput = document.getElementById("service");
 const messageInput = document.getElementById("message");
-
 const dataContainer = document.getElementById("data-container");
 
-// ==========================
 // LOAD SAVED DATA
-// ==========================
 
 document.addEventListener("DOMContentLoaded", displayProjects);
 
-// ==========================
+
 // FORM SUBMISSION
-// ==========================
 
 form.addEventListener("submit", function (e) {
   e.preventDefault();
@@ -35,9 +26,9 @@ form.addEventListener("submit", function (e) {
 
   let isValid = true;
 
-  // ==========================
+  // ==
   // VALIDATION
-  // ==========================
+ 
 
   if (name === "") {
     showError(nameInput, "Name is required");
@@ -65,9 +56,8 @@ form.addEventListener("submit", function (e) {
   // stop if invalid
   if (!isValid) return;
 
-  // ==========================
+
   // CREATE OBJECT
-  // ==========================
 
   const project = {
     name,
@@ -77,31 +67,29 @@ form.addEventListener("submit", function (e) {
     id: Date.now(),
   };
 
-  // ==========================
+  
   // LOCAL STORAGE
-  // ==========================
-
+ 
   let projects = JSON.parse(localStorage.getItem("projects")) || [];
 
   projects.push(project);
 
   localStorage.setItem("projects", JSON.stringify(projects));
 
-  // ==========================
+
   // UPDATE DOM
-  // ==========================
+  
 
   addProjectToPage(project);
 
   // reset form
   form.reset();
-
+  
   alert("Project submitted successfully!");
 });
 
-// ==========================
 // DISPLAY PROJECTS
-// ==========================
+
 
 function displayProjects() {
   const projects = JSON.parse(localStorage.getItem("projects")) || [];
@@ -111,33 +99,29 @@ function displayProjects() {
   });
 }
 
-// ==========================
 // ADD PROJECT TO PAGE
-// ==========================
+
 
 function addProjectToPage(project) {
+
+  if (!dataContainer) return;
+
   const card = document.createElement("div");
 
   card.classList.add("project-card");
 
   card.innerHTML = `
-  
     <h3>${project.name}</h3>
-
     <p><strong>Email:</strong> ${project.email}</p>
-
     <p><strong>Service:</strong> ${project.service}</p>
-
     <p>${project.message}</p>
-
   `;
 
   dataContainer.appendChild(card);
 }
 
-// ==========================
+
 // ERROR FUNCTIONS
-// ==========================
 
 function showError(input, message) {
   const formGroup = input.parentElement;
@@ -155,9 +139,7 @@ function clearErrors() {
   });
 }
 
-// ==========================
 // EMAIL VALIDATION
-// ==========================
 
 function validateEmail(email) {
   return /^[^ ]+@[^ ]+\.[a-z]{2,3}$/i.test(email);

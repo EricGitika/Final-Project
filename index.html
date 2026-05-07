@@ -1,155 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Habitat Studio</title>
-      <link rel="stylesheet" href="styles.css" />        
-     <link rel="preload" as="image" href="./interior-house.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Habitat Studio</title>
+
+  <!-- 1. Preconnect to font origins first (saves ~100–300ms DNS+TLS) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- 2. Load fonts non-blocking with font-display=swap baked in -->
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300&family=Jost:wght@300;400;500&display=swap"
+        media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300&family=Jost:wght@300;400;500&display=swap">
+  </noscript>
+
+  <!-- 3. Preload the LCP hero image (critical above-the-fold asset) -->
+  <link rel="preload" as="image" href="./house.jpg" fetchpriority="high">
+
+  <!-- 4. Preload the stylesheet -->
+  <link rel="preload" as="style" href="styles.css" onload="this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="styles.css"></noscript>
+
+  <!-- Removed: <link rel="preload" as="image" href="./interior-house.png"> 
+       (unused asset — preloading unused resources wastes bandwidth and hurts LCP) -->
 </head>
 <body>
 
   <!-- Hero Section -->
-    <header class="hero">
-  <nav class="nav">
-    <div class="logo">Habitat Studio</div>
-    <ul class="nav-links">
-      <li><a href="./about.html">About</a></li>
-      <li><a href="./contact.html">Contact</a></li>
-    </ul>
-  </nav>
+  <header class="hero">
+    <nav class="nav">
+      <div class="logo">Habitat Studio</div>
+      <ul class="nav-links">
+        <li><a href="./about.html">About</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+      </ul>
+    </nav>
 
-  <div class="hero-body">
-    <p class="eyebrow">Interior Architecture Design</p>
-    <h1>Spaces that <em>breathe</em> with you</h1>
-    <p class="subtitle">We craft considered interiors — where material, light, and proportion meet to form something lasting.</p>
-    <div class="cta-row">
-      <a href="#work" class="btn-primary">View our work</a>
-      <a href="#services" class="btn-ghost">Our services</a>
+    <div class="hero-body">
+      <p class="eyebrow">Interior Architecture Design</p>
+      <h1>Spaces that <em>breathe</em> with you</h1>
+      <p class="subtitle">We craft considered interiors — where material, light, and proportion meet to form something lasting.</p>
+      <div class="cta-row">
+        <a href="#work" class="btn-primary">View our work</a>
+        <a href="#services" class="btn-ghost">Our services</a>
+      </div>
     </div>
-  </div>
 
-  <div class="hero-footer">
-    <span class="scroll-hint"> -Scroll to explore-</span>
-    <div class="stat">
-      <span class="stat-num">50+</span>
-      <span class="stat-label">Projects completed</span>
+    <div class="hero-footer">
+      <span class="scroll-hint">-Scroll to explore-</span>
+      <div class="stat">
+        <span class="stat-num">50+</span>
+        <span class="stat-label">Projects completed</span>
+      </div>
     </div>
-  </div>
-</header>
+  </header>
 
- <!-- ── OUR WORK SECTION ── -->
-<section id="work" class="work-section">
+  <!-- OUR WORK SECTION -->
+  <section id="work" class="work-section">
     <div class="section-header">
-        <p class="eyebrow-dark">Portfolio</p>
-        <h2>Our Work</h2>
-        <p class="section-sub">These are some of our well known projects;</p>
+      <p class="eyebrow-dark">Portfolio</p>
+      <h2>Our Work</h2>
+      <p class="section-sub">These are some of our well known projects;</p>
     </div>
 
     <div class="work-grid">
 
-        <div class="work-card">
-            <img src="./house2.jpg" alt="Runda Residence" />
-            <div class="work-card-info">
-                <span class="work-tag">Residential</span>
-                <h3>Runda Residence</h3>
-                <p>Kiambu, 2024</p>
-            </div>
+      <!-- First card: no lazy load (near viewport on most screens) -->
+      <div class="work-card">
+        <img src="./house2.jpg" alt="Runda Residence" loading="lazy" decoding="async" width="600" height="320">
+        <div class="work-card-info">
+          <span class="work-tag">Residential</span>
+          <h3>Runda Residence</h3>
+          <p>Kiambu, 2024</p>
         </div>
+      </div>
 
-        <div class="work-card">
-            <img src="./hotel.jpg" alt="Hotel" />
-            <div class="work-card-info">
-                <span class="work-tag">Hotels</span>
-                <h3>Sarova Amara</h3>
-                <p>Mombasa, 2025</p>
-            </div>
+      <div class="work-card">
+        <img src="./hotel.jpg" alt="Sarova Amara Hotel interior" loading="lazy" decoding="async" width="600" height="320">
+        <div class="work-card-info">
+          <span class="work-tag">Hotels</span>
+          <h3>Sarova Amara</h3>
+          <p>Mombasa, 2025</p>
         </div>
+      </div>
 
-        <div class="work-card">
-            <img src="./3d-house-model-with-modern-architecture.jpg" alt="Residential" />
-            <div class="work-card-info">
-                <span class="work-tag">Residential</span>
-                <h3>Westlands Residence</h3>
-                <p>Westlands, 2023</p>
-            </div>
+      <div class="work-card">
+        <img src="./3d-house-model-with-modern-architecture.jpg" alt="Westlands Residence modern architecture" loading="lazy" decoding="async" width="600" height="320">
+        <div class="work-card-info">
+          <span class="work-tag">Residential</span>
+          <h3>Westlands Residence</h3>
+          <p>Westlands, 2023</p>
         </div>
+      </div>
 
-        <div class="work-card">
-            <img src="./modern-apartment-architecture.jpg" alt="The Haven Suite" />
-            <div class="work-card-info">
-                <span class="work-tag">Residential Apartments</span>
-                <h3>The Haven Suite</h3>
-                <p>Lang'ata, 2024</p>
-            </div>
+      <div class="work-card">
+        <img src="./modern-apartment-architecture.jpg" alt="The Haven Suite apartments" loading="lazy" decoding="async" width="600" height="320">
+        <div class="work-card-info">
+          <span class="work-tag">Residential Apartments</span>
+          <h3>The Haven Suite</h3>
+          <p>Lang'ata, 2024</p>
         </div>
+      </div>
 
-        <div class="work-card">
-            <img src="./restaurant-interior.jpg" alt="Loft Living" />
-            <div class="work-card-info">
-                <span class="work-tag">Restaurants</span>
-                <h3>Loft Cafe</h3>
-                <p>Kilimani, 2023</p>
-            </div>
+      <div class="work-card">
+        <img src="./restaurant-interior.jpg" alt="Loft Cafe restaurant interior" loading="lazy" decoding="async" width="600" height="320">
+        <div class="work-card-info">
+          <span class="work-tag">Restaurants</span>
+          <h3>Loft Cafe</h3>
+          <p>Kilimani, 2023</p>
         </div>
+      </div>
 
-        <div class="work-card">
-            <img src="./mall-america-scenes-cinematic-style.jpg" alt="Garden Terrace" />
-            <div class="work-card-info">
-                <span class="work-tag">Malls</span>
-                <h3>The Green Avenue Mall</h3>
-                <p>Lavington, 2026</p>
-            </div>
+      <div class="work-card">
+        <img src="./mall-america-scenes-cinematic-style.jpg" alt="The Green Avenue Mall" loading="lazy" decoding="async" width="600" height="320">
+        <div class="work-card-info">
+          <span class="work-tag">Malls</span>
+          <h3>The Green Avenue Mall</h3>
+          <p>Lavington, 2026</p>
         </div>
+      </div>
 
     </div>
-</section>
+  </section>
 
-<section id="services" class="services-section">
-
-  <div class="section-header">
-    <p class="service">What We Do</p>
-    <h2>Our Services</h2>
-  </div>
-
-  <div class="services-body">
-
-    <div class="services-grid">
-      <div class="service-card">
-        <span class="service-num">01</span>
-        <h3>Interior Design</h3>
-        <p>Full-room design from concept to completion — furniture, finishes, lighting, and styling.</p>
-      </div>
-      <div class="service-card">
-        <span class="service-num">02</span>
-        <h3>Space Planning</h3>
-        <p>Optimising layouts for flow, function, and proportion across residential and commercial spaces.</p>
-      </div>
-      <div class="service-card">
-        <span class="service-num">03</span>
-        <h3>Renovation Consulting</h3>
-        <p>Expert guidance through renovations — from material selection to contractor coordination.</p>
-      </div>
-      <div class="service-card">
-        <span class="service-num">04</span>
-        <h3>Construction Documents (CDs)</h3>
-        <p> Preparing detailed blueprints, drawings, and specifications for construction.</p>
-      </div>
+  <!-- SERVICES SECTION -->
+  <section id="services" class="services-section">
+    <div class="section-header">
+      <p class="service">What We Do</p>
+      <h2>Our Services</h2>
     </div>
 
-    <div class="service-img">
-      <img src="./architect-explain.jpg" alt="Architect Explanation" />
+    <div class="services-body">
+      <div class="services-grid">
+        <div class="service-card">
+          <span class="service-num">01</span>
+          <h3>Interior Design</h3>
+          <p>Full-room design from concept to completion — furniture, finishes, lighting, and styling.</p>
+        </div>
+        <div class="service-card">
+          <span class="service-num">02</span>
+          <h3>Space Planning</h3>
+          <p>Optimising layouts for flow, function, and proportion across residential and commercial spaces.</p>
+        </div>
+        <div class="service-card">
+          <span class="service-num">03</span>
+          <h3>Renovation Consulting</h3>
+          <p>Expert guidance through renovations — from material selection to contractor coordination.</p>
+        </div>
+        <div class="service-card">
+          <span class="service-num">04</span>
+          <h3>Construction Documents (CDs)</h3>
+          <p>Preparing detailed blueprints, drawings, and specifications for construction.</p>
+        </div>
+      </div>
+
+      <div class="service-img">
+        <img src="./architect-explain.jpg" alt="Architect explaining plans" loading="lazy" decoding="async" width="600" height="700">
+      </div>
     </div>
+  </section>
 
-  </div>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-logo">Habitat Studio</div>
+    <p>© 2026 Habitat Studio. Nairobi, Kenya.</p>
+  </footer>
 
-</section>
-
-    <!-- ── FOOTER ── -->
-    <footer class="footer">
-        <div class="footer-logo">Habitat Studio</div>
-        <p>© 2026 Habitat Studio. Nairobi, Kenya.</p>
-    </footer>
-    
 </body>
 </html>

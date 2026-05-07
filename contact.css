@@ -245,3 +245,37 @@ body {
   color: #8b7355;
   border-bottom-color: #8b7355;
 }
+
+
+.error {
+  color: red;
+  font-size: 0.8rem;
+  display: block;
+  margin-top: 5px;
+}
+
+
+/* ==========================
+   SAVED PROJECTS
+========================== */
+
+.saved-projects {
+  padding: 80px 10%;
+}
+
+#data-container {
+  display: grid;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.project-card {
+  border: 1px solid #ddd;
+  padding: 25px;
+  border-radius: 10px;
+  background: #fafafa;
+}
+
+.project-card h3 {
+  margin-bottom: 10px;
+}
