@@ -6,7 +6,7 @@ body{
 }
 .hero {
   position: relative;
-  height: 100vh;
+  height: 100svh;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -46,7 +46,8 @@ body{
   font-size: 20px;
   letter-spacing: 0.25em;
   text-transform: uppercase;
-  color: rgb(152, 103, 13)
+  color: rgb(152, 103, 13);
+  flex-shrink: 0;
 }
 
 .nav-links {
